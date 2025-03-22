@@ -67,6 +67,9 @@ def home():
 @app.route('/ipl')
 def ipl():
     return render_template('ipl.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/ipl/predict', methods=['POST'])
 def predict_ipl():

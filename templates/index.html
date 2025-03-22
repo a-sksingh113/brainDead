@@ -75,11 +75,13 @@
          </p>
          <div class="d-grid gap-2 d-sm-flex justify-content-center">
              <!-- Stats Button -->
-             <button type="button" class="btn btn-lg px-4 me-sm-3 fw-bold"
-                     style="border: 2px solid #0dcaf0; color: #0dcaf0; border-radius: 8px; 
-                            background: transparent;">
-                 View Stats
-             </button>
+             <a href="/about" class="btn btn-lg px-4 me-sm-3 fw-bold"
+             style="border: 2px solid #0dcaf0; color: #0dcaf0; border-radius: 8px; background: transparent; 
+                    text-decoration: none; display: inline-block; text-align: center;"
+             onmouseover="this.style.backgroundColor='#0dcaf0'; this.style.color='black';" 
+             onmouseout="this.style.backgroundColor='transparent'; this.style.color='#0dcaf0';">
+              IPL 2025 Winner
+          </a>
  
              <!-- Explore More Button -->
              <a href="/ipl" class="btn btn-lg px-4"
@@ -87,7 +89,7 @@
                        border-radius: 8px;"
                 onmouseover="this.style.backgroundColor='white'; this.style.color='black';" 
                 onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';">
-                 Explore More
+                 Match vise Prediction
              </a>
          </div>
      </div>
@@ -108,34 +110,34 @@
         {"name": "Lucknow Super Giants", "color": "blue", "logo": "lko-logo.jpg", "desc": "LSG has impressed since their debut, and they continue to be a strong side under KL Rahul’s leadership. Coached by Justin Langer, they have a balanced squad featuring power hitters like Marcus Stoinis and wicket-taking bowlers like Ravi Bishnoi. LSG’s depth in both batting and bowling makes them a dangerous opponent. If they can handle pressure situations better this season, they could make their way to the IPL finals."}
     ] %}
     
-    <div class="row m-0 {% if loop.index is even %}flex-md-row-reverse{% endif %}" 
-         style="background-color: #212529; padding: 40px;">
-        
-        <!-- Team Image -->
-        <div class="col-md-6 text-center p-3">
-            <img src="{{ url_for('static', filename='images/' + team.logo) }}" alt="{{ team.name }}"
-                 style=" width: 500px; height: 300px; object-fit: contain;">
-        </div>
+    <div class="row m-0 d-flex align-items-center 
+    {% if loop.index is even %} flex-column-reverse flex-md-row-reverse {% else %} flex-column flex-md-row {% endif %}" 
+style="background-color: #212529; padding: 40px;">
 
-        <!-- Team Details -->
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <div>
-                <h2 style="color: {{ team.color }};">{{ team.name }}</h2>
-                <p style="color: white;">{{ team.desc }}</p>
-
-                <!-- "Know More" Button -->
-                <button class="btn" style="border: 2px solid white; color: white; padding: 10px 20px; 
-                         border-radius: 8px; transition: 0.3s; background: transparent;"
-                        onmouseover="this.style.backgroundColor='white'; this.style.color='black';" 
-                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';">
-                    Know More
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    {% endfor %}
+<!-- Team Image -->
+<div class="col-12 col-md-6 text-center p-3">
+<img src="{{ url_for('static', filename='images/' + team.logo) }}" alt="{{ team.name }}"
+     class="img-fluid" style="max-width: 90%; max-height: 300px; object-fit: contain;">
 </div>
+
+<!-- Team Details -->
+<div class="col-12 col-md-6 d-flex flex-column align-items-center text-center text-md-start">
+<div>
+    <h2 style="color: {{ team.color }};">{{ team.name }}</h2>
+    <p style="color: white;">{{ team.desc }}</p>
+
+    <!-- "Know More" Button -->
+    <button class="btn" style="border: 2px solid white; color: white; padding: 10px 20px; 
+             border-radius: 8px; transition: 0.3s; background: transparent;"
+            onmouseover="this.style.backgroundColor='white'; this.style.color='black';" 
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';">
+        Know More
+    </button>
+</div>
+</div>
+</div>
+
+{% endfor %}
 
    
 <footer class="py-4 mt-0" style="background-color: #1f2937; color: white;">
