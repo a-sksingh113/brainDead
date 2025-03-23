@@ -57,44 +57,161 @@
             </div>
         </div>
     </nav>
-    
     <div style="font-family: Arial, sans-serif; background-color: #212529; color: #f8f9fa; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
+
+        <!-- Main Container -->
         <div style="max-width: 100%; background-color: #343a40; box-shadow: 0 0px 0px rgba(255, 215, 0, 0.7); border-radius: 0px; padding: 30px; margin-top: 0px; width: 100%;">
-            <h1 style="text-align: center; color: #17a2b8;">IPL 2025 Winner Prediction Model</h1>
-            <h2 style="text-align: center; color: #ffc107;">About the Model</h2>
-            <p>This model leverages advanced machine learning techniques to predict the winner of IPL 2025. The model analyzes historical match data, team performance metrics, player statistics, and environmental factors to make accurate predictions.</p>
-
-            <h2 style="text-align: center; color: #ffc107;">Methods and Processes</h2>
-            <ul>
-                
-                <li><strong>Data Merging:</strong> Key datasets such as match results, player performance, and venue statistics were merged using pandas to create a unified dataset for better insights.</li>
-                <li><strong>Exploratory Data Analysis (EDA):</strong> Insightful visualizations were created using Matplotlib and Seaborn to identify trends such as match-winning conditions, player form, and venue impact.</li>
-                <li><strong>Data Preprocessing:</strong> Techniques like handling missing values using SimpleImputer and encoding categorical variables using LabelEncoder ensured data consistency.</li>
-                <li><strong>Feature Engineering:</strong> Derived features like team form, individual player consistency, home-ground advantage, and toss outcomes improved prediction accuracy.</li>
-                <li><strong>Model Training:</strong> Algorithms like Random Forest, XGBoost, and a Multi-Layer Perceptron (MLP) were trained and optimized using stratified cross-validation techniques to ensure balanced class distribution.</li>
-                <li><strong>Ensemble Learning:</strong> Techniques such as stacking and boosting integrated multiple models to improve prediction stability and reduce bias/variance trade-offs.</li>
-                <li><strong>Evaluation:</strong> Accuracy, ROC-AUC scores, and F1-score metrics were extensively analyzed to ensure reliable predictions under various match scenarios.</li>
-            </ul>
-
-            </ul>
-
-            <h2 style="text-align: center; color: #ffc107;">Libraries Used</h2>
-            <p>The following libraries played a vital role in model development:</p>
-            <ul>
-                <li>Scikit-learn - For machine learning algorithms and model evaluation.</li>
-                <li>Pandas - For data manipulation and analysis.</li>
-                <li>NumPy - For numerical operations.</li>
-                <li>Matplotlib & Seaborn - For visualizing insights and results.</li>
-                <li>XGBoost - For enhanced model performance using boosting techniques.</li>
-            </ul>
-
-            <h2 style="text-align: center; color: #ffc107;">Predicted Winner</h2>
-            <div style="background-color:rgb(87, 167, 40); color: #fff; padding: 10px 20px; border-radius: 8px; text-align: center; font-weight: bold; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.8); margin-top: 20px;">🏆 Kolkata Knight Riders 🏆</div>
-
+    
+            <!-- Title Card -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); margin-bottom: 20px;">
+                <h1 style="text-align: center; color: #17a2b8; font-size: 36px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">IPL 2025 Winner</h1>
+            </div>
+    
+            <!-- About the Model Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">About the Model</h2>
+                <p>This model leverages advanced machine learning techniques to predict the winner of IPL 2025. The model analyzes historical match data, team performance metrics, player statistics, and environmental factors to make accurate predictions.</p>
+            </div>
+    
+            <!-- Problem Statement Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Problem Statement</h2>
+                <p>The goal of this project is to perform an end-to-end exploratory data analysis (EDA) and predict the winner of the 2025 Indian Premier League (IPL) season using historical IPL data. The project demonstrates the application of advanced machine learning techniques to sports data, focusing on team and player performance metrics.</p>
+            </div>
+    
+            <!-- Objectives Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Objectives</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Data Cleaning and Feature Engineering</li>
+                    <li>Exploratory Data Analysis (EDA)
+                        <ul>
+                            <li>Team Performance</li>
+                            <li>Player Performance (Analyze team and player performance using historical IPL data)</li>
+                            <li>Seasonal Performance</li>
+                        </ul>
+                    </li>
+                    <li>Feature Extraction</li>
+                    <li>Building a predictive model to forecast the winner of IPL 2025 (Experiment with ensemble models like Random Forest, XGBoost, and neural networks)</li>
+                </ul>
+            </div>
+    
+            <!-- Dataset Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Dataset</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Matches: Information about IPL matches from 2008 to 2024.</li>
+                    <li>Deliveries: Ball-by-ball data for each match.</li>
+                    <li>Team Performance: Aggregated statistics for each team (Created as part of EDA for model building).</li>
+                    <li>Player Performance: Statistics for individual players (Created as part of EDA for model building).</li>
+                </ul>
+            </div>
+    
+            <!-- Data Preprocessing Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Data Preprocessing</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Handling Missing and Duplicated Values</li>
+                    <li>Standardizing Inconsistencies in Team Names</li>
+                    <li>Removing Unnecessary Columns</li>
+                </ul>
+            </div>
+    
+            <!-- EDA Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Exploratory Data Analysis (EDA)</h2>
+    
+                <!-- Team Performance -->
+                <h3 style="color: #ffc107; font-size: 24px; font-weight: 500; letter-spacing: 1px;">Team Performance</h3>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Plot of Matches Played and Winning Percentages</li>
+                    <li>Plot of Run Rate and Economy Rate (as a bowling side)</li>
+                    <li>Plot of Highest and Lowest Scores</li>
+                    <li>Plot of Total 4s and 6s</li>
+                    <li>Plot of Average Powerplay and Death Overs Score</li>
+                    <li>Powerplay Analysis</li>
+                </ul>
+    
+                <!-- Player Performance -->
+                <h3 style="color: #ffc107; font-size: 24px; font-weight: 500; letter-spacing: 1px;">Player Performance</h3>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Top 20 run-scorers</li>
+                    <li>Batting Average vs Batting Strike Rate for the top 20 run-scorers</li>
+                    <li>Top 6’s, 4’s, and 1’s scorer analysis</li>
+                    <li>Wicket-taker and Man of the Match analysis</li>
+                </ul>
+    
+                <!-- Seasonal Performance -->
+                <h3 style="color: #ffc107; font-size: 24px; font-weight: 500; letter-spacing: 1px;">Seasonal Performance</h3>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Average Runs per Match per Season</li>
+                    <li>Targets of 200+ Runs per Season</li>
+                    <li>Orange Cap and Purple Cap Holder Analysis</li>
+                </ul>
+            </div>
+    
+            <!-- Model Development Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Model Creation and Development</h2>
+                <h3 style="color: #ffc107; font-size: 24px; font-weight: 500; letter-spacing: 1px;">Methodology</h3>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Data Merging: Merged the matches and deliveries datasets using the match_id and id columns.</li>
+                    <li>Feature Engineering: Encoded categorical variables using LabelEncoder and handled missing values using SimpleImputer.</li>
+                    <li>Model Development: Used Random Forest, XGBoost, and Neural Network classifiers, and combined them using a VotingClassifier for ensemble learning.</li>
+                </ul>
+            </div>
+    
+            <!-- Model Evaluation Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Model Evaluation</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Evaluated models based on accuracy, precision, recall, and F1-score.</li>
+                    <li>Predicted IPL 2025 winner using the ensemble model.</li>
+                </ul>
+            </div>
+    
+            <!-- Results Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Results</h2>
+                <p>The model performance achieved the following results:</p>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Random Forest: 89.93% Accuracy</li>
+                    <li>XGBoost: 89.97% Accuracy</li>
+                    <li>Neural Network: 71.33% Accuracy</li>
+                    <li>Ensemble Model: 90.01% Accuracy (best performer)</li>
+                </ul>
+                <p>The ensemble model predicted <strong>Kolkata Knight Riders</strong> as the most likely winner of the 2025 IPL season.</p>
+            </div>
+    
+            <!-- Conclusion Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Conclusion</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>The ensemble model combining Random Forest, XGBoost, and Neural Network achieved the highest accuracy.</li>
+                    <li>Tree-based models outperformed the Neural Network due to better handling of categorical data and non-linear relationships.</li>
+                    <li>The toss decision and venue significantly influenced match outcomes.</li>
+                    <li>The predicted winner of IPL 2025 is <strong>Kolkata Knight Riders</strong>.</li>
+                </ul>
+            </div>
+    
+            <!-- Limitations Section -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Limitations</h2>
+                <ul style="text-align: left; margin-bottom: 20px; padding-left: 20px;">
+                    <li>Model could not account for injuries, player transfers, or other dynamic factors.</li>
+                    <li>Accuracy may vary depending on unforeseen match conditions or human factors.</li>
+                </ul>
+            </div>
             
+            <!-- Winner Prediction Heading -->
+            <div style="background-color: #343a40; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); margin-bottom: 20px;">
+                <h2 style="text-align: center; color: #ffc107; font-size: 28px; font-weight: 600; letter-spacing: 1px; text-decoration: none;">Predicted 2025 IPL Winner</h2>
+                <h3 style="text-align: center; color: #17a2b8; font-size: 32px; font-weight: 700;">🏆 Kolkata Knight Riders 🏆</h3>
+            </div>
+    
         </div>
     </div>
-   
+    
 <footer class="py-4 mt-0" style="background-color: #1f2937; color: white;">
     <div class="container text-center">
         <!-- Footer Title -->
