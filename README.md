@@ -1,4 +1,4 @@
-A Complete EDA of IPL History and IPL 2025 Winner Prediction
+A Complete EDA of IPL History and IPL 2025 Winner Prediction [ live https://dataavengers.onrender.com ]
 
 Problem Statement
 The goal of this project is to Perform an end to end EDA and predict the winner of the 2025 Indian Premier League (IPL) season using historical IPL data. The project demonstrates the application of advanced machine learning techniques to sports data, with a focus on team and player performance metrics.
